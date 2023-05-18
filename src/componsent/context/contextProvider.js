@@ -6,7 +6,7 @@ const ContextProvider = (props) => {
   const postData = async (obj) => {
     try {
       const jsondata = JSON.stringify(obj);
-      const response = await fetch("http://localhost:5000/post-product", {
+      const response = await fetch("http://54.174.5.88:5000/post-product", {
         method: "POST",
         body: jsondata,
         headers: {
@@ -22,7 +22,7 @@ const ContextProvider = (props) => {
   };
   async function getData() {
     try {
-      const response = await fetch("http://localhost:5000/", {
+      const response = await fetch("http://54.174.5.88:5000/", {
         method: "GET",
 
         headers: {
@@ -37,7 +37,7 @@ const ContextProvider = (props) => {
     }
   }
   const deleteItem = async (id) => {
-    const response = await fetch(`http://localhost:5000/post-product/${id}`, {
+    const response = await fetch(`http://54.174.5.88:5000/post-product/${id}`, {
       method: "DELETE",
     });
     const data = await response.json();
